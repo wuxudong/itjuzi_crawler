@@ -1,4 +1,4 @@
-package com.mrkid.ecommerce.itjuzi;
+package com.mrkid.crawler.itjuzi;
 
 import com.mrkid.crawler.Spider;
 import org.apache.commons.cli.*;

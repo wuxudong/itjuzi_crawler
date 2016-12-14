@@ -1,4 +1,4 @@
-package com.mrkid.ecommerce.itjuzi.processor;
+package com.mrkid.crawler.itjuzi.processor;
 
 import java.io.*;
 

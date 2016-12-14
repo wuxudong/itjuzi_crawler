@@ -1,14 +1,8 @@
-package com.mrkid.ecommerce.itjuzi;
+package com.mrkid.crawler.itjuzi;
 
 import com.mrkid.crawler.Spider;
 import io.reactivex.Flowable;
-import org.apache.commons.cli.*;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 
-import javax.script.ScriptException;
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**

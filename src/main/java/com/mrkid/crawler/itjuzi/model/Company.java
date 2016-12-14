@@ -1,4 +1,4 @@
-package com.mrkid.ecommerce.itjuzi.modle;
+package com.mrkid.crawler.itjuzi.model;
 
 import java.util.ArrayList;
 import java.util.List;

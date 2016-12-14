@@ -1,4 +1,4 @@
-package com.mrkid.ecommerce.itjuzi;
+package com.mrkid.crawler.itjuzi;
 
 import com.mrkid.crawler.Site;
 import com.mrkid.crawler.Spider;
@@ -8,9 +8,9 @@ import com.mrkid.crawler.processor.CompositePageProcessor;
 import com.mrkid.crawler.processor.PageProcessor;
 import com.mrkid.crawler.scheduler.MemoryScheduler;
 import com.mrkid.crawler.scheduler.Scheduler;
-import com.mrkid.ecommerce.itjuzi.processor.ITJuziCompanyProcessor;
-import com.mrkid.ecommerce.itjuzi.processor.ITJuziPageProcessor;
-import com.mrkid.ecommerce.itjuzi.processor.ITJuziTokenProcessor;
+import com.mrkid.crawler.itjuzi.processor.ITJuziCompanyProcessor;
+import com.mrkid.crawler.itjuzi.processor.ITJuziPageProcessor;
+import com.mrkid.crawler.itjuzi.processor.ITJuziTokenProcessor;
 import org.apache.http.*;
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 import org.apache.http.impl.nio.client.HttpAsyncClientBuilder;

@@ -1,13 +1,13 @@
-package com.mrkid.ecommerce.itjuzi.processor;
+package com.mrkid.crawler.itjuzi.processor;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mrkid.crawler.Page;
 import com.mrkid.crawler.Request;
+import com.mrkid.crawler.itjuzi.Globals;
+import com.mrkid.crawler.itjuzi.RequestHelper;
 import com.mrkid.crawler.processor.SubPageProcessor;
-import com.mrkid.ecommerce.itjuzi.Globals;
-import com.mrkid.ecommerce.itjuzi.PageType;
-import com.mrkid.ecommerce.itjuzi.RequestHelper;
+import com.mrkid.crawler.itjuzi.PageType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

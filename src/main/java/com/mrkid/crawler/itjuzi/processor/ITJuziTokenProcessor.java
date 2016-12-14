@@ -1,10 +1,11 @@
-package com.mrkid.ecommerce.itjuzi.processor;
+package com.mrkid.crawler.itjuzi.processor;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mrkid.crawler.Page;
 import com.mrkid.crawler.Request;
 import com.mrkid.crawler.processor.SubPageProcessor;
-import com.mrkid.ecommerce.itjuzi.PageType;
+import com.mrkid.crawler.itjuzi.Globals;
+import com.mrkid.crawler.itjuzi.PageType;
 import org.springframework.stereotype.Component;
 
 /**
@@ -14,17 +15,12 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-public class ITJuziCompanyProcessor implements SubPageProcessor {
+public class ITJuziTokenProcessor implements SubPageProcessor {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
     public MatchOther processPage(Page page) throws Exception {
-
-        long id = (Long)page.getRequest().getExtra("id");
-
-        CompanyDumper.dumpCompany(id, page.getRawText());
-        System.out.println("company " + page.getRequest().getExtra("id") + " done");
-
+        Globals.token = objectMapper.readTree(page.getRawText()).get("access_token").asText();
 
         return MatchOther.NO;
 
@@ -32,6 +28,6 @@ public class ITJuziCompanyProcessor implements SubPageProcessor {
 
     @Override
     public boolean match(Request page) {
-        return page.getPageType().equals(PageType.COMPANY);
+        return page.getPageType().equals(PageType.TOKEN);
     }
 }

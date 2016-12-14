@@ -1,7 +1,6 @@
-package com.mrkid.ecommerce.itjuzi;
+package com.mrkid.crawler.itjuzi;
 
 import com.mrkid.crawler.Request;
-import com.mrkid.ecommerce.itjuzi.PageType;
 
 import java.util.HashMap;
 import java.util.Map;
