@@ -44,6 +44,8 @@ public class ITJuziConfiguration {
 
         // use squid as proxy, you may add parent of proxies in squid
         site.setHttpProxy(new HttpHost("127.0.0.1", 3128));
+        site.setMaxConnTotal(1000);
+        site.setMaxConnPerRoute(1000);
 
         return site;
     }
@@ -105,13 +107,10 @@ public class ITJuziConfiguration {
     public Spider spider(Site site, Downloader downloader, Scheduler scheduler,
                          PageProcessor pageProcessor) {
         Spider spider = new Spider();
+        spider.setSite(site);
         spider.setDownloader(downloader);
         spider.setPageProcessor(pageProcessor);
-        spider.setPipeline(resultItems -> {
-        });
-        spider.setSite(site);
         spider.setScheduler(scheduler);
-        spider.setMaxConcurrency(200);
         return spider;
     }
 }
